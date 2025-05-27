@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="fly.jpg" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FLY - Flight Not Available</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="deals.css">
+        <link rel="stylesheet" href="exclusive_deals.css">
+        <link rel="stylesheet" href="conclusion.css">
+        <link rel="stylesheet" href="flight_not_available.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <nav class="nav_for_all_pages">
+            <div class="nav_nav_for_mobile">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="fly_logo.jpg" class="fly_logo_nav">
+                    </a>
+                </div>
+
+                <div class="nav-space"></div>
+
+                <div class="hamburger" id="hamburger">
+                    &#9776;
+                </div>
+            </div>
+          
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><div class="no_gift" onclick="showPopup()">Gifts</div></li>
+                <div class="popup" id="popup"><center>No gifts available 🎁</center></div>
+                <script src="script_no_gift.js"></script>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>  
+            </ul>
+      
+            
+        </nav>
+      
+        <script src="script_navigation.js"></script>
+
+        <div style="display: flex; justify-content: center; align-items: center; height: 90vh;">
+            <center>
+                <img src="oups.jpg" class="oups_image">
+                <br>
+                <font class="deals_font_1">
+                    FLIGHTS NOT AVAILABLE
+                </font>
+                <br><br>
+                <div style="width: 90%;">
+                    <font class="exclusive_deals_font_2">
+                    Flights are currently unavailable. Please check back later or try alternative dates or routes. We apologize for the inconvenience and appreciate your patience as we work to resolve this issue.                    
+                </font>
+                </div>
+            </center>
+        </div>
+        <br>
+
+    </body>
+</html>

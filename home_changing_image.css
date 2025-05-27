@@ -1,0 +1,26 @@
+.home_changing_image_all {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+@media (max-width: 768px){
+  .image-wraper{
+    aspect-ratio: 1/1;
+    position: relative;
+  }
+  .home_changing_image_all{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}

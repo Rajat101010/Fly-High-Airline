@@ -1,0 +1,9 @@
+.oups_image{
+    width: 10%; 
+}
+
+@media (max-width: 768px){
+    .oups_image{
+    width: 40%; 
+}
+}

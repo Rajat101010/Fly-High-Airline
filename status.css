@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+.flight-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-items: flex-end;
+  padding: 5rem;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px){
+    .flight-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  align-items: flex-end;
+  padding: 2rem;
+  font-size: 1.7rem;
+}
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 200px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.required {
+  color: red;
+  font-weight: normal;
+}
+
+.flight-form input[type="text"],
+.flight-form input[type="date"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.flight-form button {
+  padding: 10px 20px;
+  color: white;
+  background-color: red;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
+  .flight-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
