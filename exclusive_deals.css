@@ -1,0 +1,111 @@
+.exclusive_deals_section{
+    display:flex;
+    align-items: left;
+    justify-content: left;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.exclusive_deals_font_1{
+    font-family: Verdana, sans-serif;
+    font-size: 4rem;
+    color: red;
+}
+
+.exclusive_deals_font_2{
+    font-family: Verdana, sans-serif;
+    font-size: 1.6rem;
+}
+
+.exclusive_deals_font_3{
+    font-family: Verdana, sans-serif;
+    font-size: 1.6rem;
+}
+
+.exclusive_deals_font_4{
+    font-family: Verdana, sans-serif;
+    font-size: 1.3rem;
+}
+
+@media (max-width: 768px) {
+    .exclusive_deals_section{
+        display:flex;
+        align-items: left;
+        justify-content: left;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+    
+    .exclusive_deals_font_1{
+        font-family: Verdana, sans-serif;
+        font-size: 2.8rem;
+        color: red;
+    }
+
+    .exclusive_deals_font_2{
+        font-family: Verdana, sans-serif;
+        font-size: 1.7rem;
+    }
+
+    .exclusive_deals_font_3{
+        font-family: Verdana, sans-serif;
+        font-size: 2rem;
+    }
+    
+    .exclusive_deals_font_4{
+        font-family: Verdana, sans-serif;
+        font-size: 1.7rem;
+    }
+    
+}
+
+
+
+
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+}
+  
+.image-container {
+    padding: .5rem;
+    background-color:#ffecec;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.text-container{
+    padding:2rem;
+}
+  
+.image-container img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+  
+
+@media (max-width: 768px) {
+    .image-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
+      
+    }
+}
+  

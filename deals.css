@@ -1,0 +1,61 @@
+.deals_font_1{
+    font-family: comic Sans MS;
+    font-size: 4rem;
+    color:brown;
+}
+
+@media (max-width: 768px){
+    .deals_font_1{
+        font-family: comic Sans MS;
+        font-size: 3rem;
+        color:brown;
+    }
+}
+
+.deals_item-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    padding-top: 2rem;
+}
+  
+.deals_item-container {
+    padding: .5rem;
+    background-color:#ffecec;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.deals_item-container_2{
+    padding:2rem;
+}
+
+@media (max-width: 768px) {
+    .deals_item-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        width: 100%;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-top: 1rem;
+      
+    }
+}
+
+.button_view_more{
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    margin: .4rem .2rem;
+    cursor: pointer;
+    background-color: red; 
+    padding: 1.2rem;
+    border-radius: 5px;
+    width: 98%;
+}

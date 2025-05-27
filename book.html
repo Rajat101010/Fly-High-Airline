@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="fly.jpg" type="image/png">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FLY - Flight Booking</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="deals.css">
+        <link rel="stylesheet" href="book.css">
+        <link rel="stylesheet" href="exclusive_deals.css">
+        <link rel="stylesheet" href="conclusion.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+
+        <nav class="nav_for_all_pages">
+            <div class="nav_nav_for_mobile">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="fly_logo.jpg" class="fly_logo_nav">
+                    </a>
+                </div>
+
+                <div class="nav-space"></div>
+
+                <div class="hamburger" id="hamburger">
+                    &#9776;
+                </div>
+            </div>
+          
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><div class="no_gift" onclick="showPopup()">Gifts</div></li>
+                <div class="popup" id="popup"><center>No gifts available 🎁</center></div>
+                <script src="script_no_gift.js"></script>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="FAQs.html">FAQs</a></li>  
+            </ul>
+      
+            
+        </nav>
+      
+        <script src="script_navigation.js"></script>
+
+        <br>
+
+        <center>
+            <font class="deals_font_1">
+                FLIGHT BOOKING ONLINE AT BEST FARE
+            </font>
+        </center>
+
+        <section>
+            <div class="deals_item-grid">
+                <div class="deals_item-container">
+                    <div class="deals_item-container_2">
+                        <font class="exclusive_deals_font_3">
+                                <b>Discount upto ₹ 2000</b>
+                                <br>
+                                <font class="exclusive_deals_font_4">
+                                    Use code UPIPROMO & get Min ₹400 on domestic & upto 2500 on international flights.                        </font>
+                        </font>
+                    </div>
+                </div>
+                <div class="deals_item-container">
+                    <div class="deals_item-container_2">
+                        <font class="exclusive_deals_font_3">
+                            <b>Flat 10% OFF</b>
+                            <br>
+                            <font class="exclusive_deals_font_4">
+                                Use FLY2IND & get flat 10% off on flights from US, CA, AU to India.                       </font>
+                        </font>
+                    </div>
+                </div>
+                <div class="deals_item-container">
+                    <div class="deals_item-container_2">
+                        <font class="exclusive_deals_font_3">
+                            <b>Discount upto ₹ 6000</b>
+                            <br>
+                            <font class="exclusive_deals_font_4">
+                                Use code HSBCDOM for domestic flights. <br>
+                                Use code HSBCINT for international flights.                        </font>
+                        </font>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br><br>
+
+        <section>
+            <div>
+                <div class="exclusive_deals_section">
+                    <font class="exclusive_deals_font_1">
+                        <b>FLIGHT BOOKING FORM</b>
+                    </font>
+                </div>
+            </div>
+        </section>
+
+        <form id="bookingForm" class="booking_page_form">
+            <div class="form-grid">
+
+                <!-- Column 1 -->
+                <div>
+                    <br>
+                    <label for="tripType">Trip Type: <span class="required">*</span></label>
+                    <select id="tripType" name="tripType" required>
+                    <option value="">Select trip type</option>
+                    <option value="oneway">One-Way</option>
+                    <option value="twoway">Two-Way</option>
+                    </select>
+                </div>
+
+                <!-- Column 2 -->
+                <div>
+                    <br>
+                    <label for="from">From: <span class="required">*</span></label>
+                    <input type="text" id="from" name="from" placeholder="Departure Location" required>
+                    <br><br>
+
+                    <label for="to">To: <span class="required">*</span></label>
+                    <input type="text" id="to" name="to" placeholder="Destination" required>
+                </div>
+
+                <!-- Column 3 -->
+                <div>
+                    <br>
+                    <label for="departure">Date of Departure: <span class="required">*</span></label>
+                    <input type="date" id="departure" name="departure" required>
+                    <br><br>
+
+                    <label for="return">Date of Return:</label>
+                    <input type="date" id="return" name="return">
+                </div>
+
+                <!-- Column 4 -->
+                <div>
+                    <br>
+                    <label for="class">Flight Class: <span class="required">*</span></label>
+                    <select id="class" name="class" required>
+                    <option value="">Select Class</option>
+                    <option value="economy">Economy</option>
+                    <option value="business">Business</option>
+                    <option value="first">First Class</option>
+                    </select>
+                    <br><br>
+
+                    <label for="promo">Promo Code:</label>
+                    <input type="text" id="promo" name="promo">
+                </div>
+                </div>
+                
+
+                <!-- Passenger Section Row -->
+                <div class="passenger-row">
+                <div class="passenger-details-full">
+                    <div class="passenger-header">
+                    <font class="exclusive_deals_font_1">
+                        <b>Passenger Details</b>
+                    </font>
+                    <div class="add-passenger-btn">
+                        <button type="button" onclick="addPassenger()" title="Add Passenger">
+                        <i class="fa fa-plus-circle" style="font-size:36px"></i>
+                        </button>
+                    </div>
+                    </div>
+
+                    <div id="passengerContainer" class="passenger-container">
+                    <div class="passenger">
+                        <label>Name: <span class="required">*</span></label>
+                        <input type="text" name="name[]" placeholder="Name" required>
+                        <label>Age: <span class="required">*</span></label>
+                        <input type="number" name="age[]" placeholder="Age" required>
+                        <label>Gender: <span class="required">*</span></label>
+                        <select name="gender[]" required>
+                        <option value="">Select Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        </select>
+                    </div>
+                    </div>
+                    <!-- Submit -->
+                    <center>
+                    <div class="submit-row">
+                    <button class="button_view_more" type="submit" id="searchBtn" disabled>Search Flights</button>
+                    </div>
+                    </center>
+                </div>
+            </div>
+
+
+
+
+
+
+    
+        </form>
+
+        <script src="script_booking_page.js"></script>
+
+
+<br><br><br><br>
+
+
+
+
+        <section>
+            <div class="conclusion_top">
+                <center>
+                    <font class="conclusion_font_3">
+                        Fly High Airlines
+                    </font>
+                </center>
+            </div>
+            <div class="conclusion_hr">
+                <div class="container">
+                    <br><br>
+                    <hr class="hr_hr">
+                </div>
+            </div>
+            <div class="conclusion_top">
+                <div style="width: 90%;">
+                    <font class="conclusion_font_2">
+                        <center>
+                            <i>
+                                Think big, dream bold, and soar to new heights with Fly High Airlines — where your journey begins with limitless possibilities and ends with unforgettable experiences.
+                            </i>
+                        </center>
+                    </font>
+                </div>
+            </div>
+            <div class="conclusion-grid">
+                <div class="conclusion-container">
+                    <table order="1" width="100%">
+                        <tr>
+                            <td width="50%">
+                                <center>
+                                    <font class="exclusive_deals_font_3">
+                                        <b>Exclusive Deals</b>
+                                    </font>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>
+                                    <font class="exclusive_deals_font_4">
+                                        <a href="book.html">
+                                            Save with UPI <i class="fa fa-external-link"></i> <br>
+                                        </a>
+                                        <a href="savings.html">
+                                            Take off with 10% savings <i class="fa fa-external-link"></i> <br>
+                                        </a>
+                                        <a href="early_bird_offers.html">
+                                            Early Bird Offers <i class="fa fa-external-link"></i> <br>
+                                        </a>
+                                        <a href="book.html">
+                                            Exclusive offers for Students <i class="fa fa-external-link"></i>
+                                        </a>
+                                    </font>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="conclusion-container">
+                    <table order="1" width="100%">
+                        <tr>
+                            <td width="50%">
+                                <center>
+                                    <font class="exclusive_deals_font_3">
+                                        <b>Prepare to Travel</b>
+                                    </font>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>
+                                    <font class="exclusive_deals_font_4">
+                                        Baggage Essentials <br>
+                                        Airport Adventures <br>
+                                        Before you fly
+                                    </font>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="conclusion-container">
+                    <table order="1" width="100%">
+                        <tr>
+                            <td width="50%">
+                                <center>
+                                    <font class="exclusive_deals_font_3">
+                                        <b>Group Booking</b>
+                                    </font>
+                                </center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <center>
+                                    <font class="exclusive_deals_font_4">
+                                        <a href="group_booking.html">
+                                            Tour Groups <i class="fa fa-external-link"></i> <br>
+                                        </a>
+                                        <a href="group_booking.html">
+                                            Sports Teams <i class="fa fa-external-link"></i> <br>
+                                        </a>
+                                        <a href="group_booking.html">
+                                            Educational Tours <i class="fa fa-external-link"></i> <br>
+                                        </a>
+                                        <a href="group_booking.html">
+                                            Religious Groups <i class="fa fa-external-link"></i>
+                                        </a>
+                                    </font>
+                                </center>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="conclusion-container" style="background-color: #fff8f8; border-radius: 20px;">
+                    <center>
+                        <font class="conclusion_font_1">
+                            <b>Social Media</b>
+                        </font>
+                        <br><br>
+                        <center>
+                            <font class="social_logo">
+                                <a href="https://www.linkedin.com/in/rajat-raj-shah-197aa8304/">
+                                    <font class="social_logo">
+                                        <i class="fa fa-linkedin-square"></i>
+                                    </font>
+                                </a>
+                            </font>
+                            <font class="social_logo">
+                                <a href="mailto: rajatrajshah@gmail.com">
+                                    <font class="social_logo">
+                                        <i class="fa fa-envelope-square"></i>
+                                    </font>
+                                </a>
+                            </font>
+                            <font class="social_logo">
+                                <a href="https://github.com/Rajat101010">
+                                    <font class="social_logo">
+                                        <i class="fa fa-github-square"></i>
+                                    </font>
+                                </a>
+                            </font>
+                            <font class="social_logo">
+                                <a href="https://x.com/rajat_raj_shah?t=uD-ULr5-cdZGqWGEVp33Cw&s=09">
+                                    <font class="social_logo">
+                                        <i class="fa fa-twitter-square"></i>
+                                    </font>
+                                </a>
+                            </font>
+                        </center>
+                    </center>
+                </div>
+            </div>
+            <div class="conclusion_hr">
+                <div class="container">
+                    <br><br>
+                    <hr class="hr_hr">
+                </div>
+            </div>
+            <div class="conclusion_bottom">
+                <center>
+                    <font class="conclusion_font_2">
+                        Fly High Airlines | © 2025 Fly High Pvt. Ltd.
+                    </font>
+                </center>
+            </div>
+        </section>
+    </body>
+</html>
